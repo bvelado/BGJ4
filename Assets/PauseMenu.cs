@@ -14,6 +14,9 @@ public class PauseMenu : MonoBehaviour {
     [SerializeField]
     private CanvasGroup pausePanel;
 
+    [SerializeField]
+    private Text recText;
+
     private Sequence seq;
 
     private bool _expanded;
@@ -46,7 +49,15 @@ public class PauseMenu : MonoBehaviour {
         if (Input.GetButtonDown("Start1") || Input.GetButtonDown("Start2"))
         {
             Expanded = !Expanded;
-            
+
+            if (Expanded)
+            {
+                firstSelected.Select();
+                recText.text = "REC OFF";
+            } else
+            {
+                recText.text = "REC";
+            }
         }
     }
 }

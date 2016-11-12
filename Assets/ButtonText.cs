@@ -18,7 +18,7 @@ public class ButtonText : MonoBehaviour, ISelectHandler, IDeselectHandler
     private Color NormalColor;
 
     Sequence m_sequence;
-
+    
     void Start()
     {
         m_button = GetComponent<Button>();
