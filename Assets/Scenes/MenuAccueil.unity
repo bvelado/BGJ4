@@ -629,6 +629,7 @@ GameObject:
   - 224: {fileID: 950571753}
   - 222: {fileID: 950571755}
   - 114: {fileID: 950571754}
+  - 95: {fileID: 950571756}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -651,9 +652,9 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 461, y: 291}
+  m_AnchoredPosition: {x: 250, y: 80}
   m_SizeDelta: {x: 465, y: 407}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &950571754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +688,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950571752}
+--- !u!95 &950571756
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950571752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7649452ca98560844a395ec06796fa09, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &981091421
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 640809541}
-  gameLogo: {fileID: 950571753}
 --- !u!1 &1099034343
 GameObject:
   m_ObjectHideFlags: 0
