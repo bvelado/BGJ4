@@ -17,7 +17,7 @@ public class Death : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collider){
 		if (collider.CompareTag("Player")){
-			//collider.GetComponent<GoblinController>().Respawn();
+			collider.GetComponent<GoblinPlus>().Respawn();
 		}
 	}
 }

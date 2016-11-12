@@ -15,7 +15,7 @@ public class Checkpoint : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collider){
 		if (collider.CompareTag("Player")){
-			//collider.GetComponent<GoblinController>().SetNewCheckpoint();
+			collider.GetComponent<GoblinPlus>().SetNewCheckpoint();
 		}
 	}
 }
