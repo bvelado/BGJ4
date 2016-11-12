@@ -35,6 +35,10 @@ public class PauseMenu : MonoBehaviour {
         m_animator = GetComponent<Animator>();
 
         Expanded = false;
+        seq = DOTween.Sequence();
+        seq.Append(pausePanel.DOFade(0f, 0.4f));
+
+        seq.Play();
     }
 
     void Update()
@@ -42,26 +46,7 @@ public class PauseMenu : MonoBehaviour {
         if (Input.GetButtonDown("Start1") || Input.GetButtonDown("Start2"))
         {
             Expanded = !Expanded;
-
-            if (_expanded)
-            {
-                seq.Kill();
-
-                seq = DOTween.Sequence();
-
-                seq.Append(pausePanel.DOFade(1f, 0.4f))
-                    .InsertCallback(0.4f, () => firstSelected.Select());
-
-                seq.Play();
-            } else
-            {
-                seq.Kill();
-
-                seq = DOTween.Sequence();
-                seq.Append(pausePanel.DOFade(0f, 0.4f));
-
-                seq.Play();
-            }
+            
         }
     }
 }
