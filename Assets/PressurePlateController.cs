@@ -2,9 +2,10 @@
 using System.Collections;
 
 [RequireComponent(typeof(Collider))]
-public class LeverController : MonoBehaviour
-{
+public class PressurePlateController : MonoBehaviour {
+
     public GameObject[] activables;
+    public GameObject movablesRoot;
     public float time = 3f;
     public bool isTimed = false;
     private float timer = 0f;
@@ -15,16 +16,13 @@ public class LeverController : MonoBehaviour
     {
         if (triggered)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (!state)
             {
-                if (!state)
+                foreach (GameObject activable in activables)
                 {
-                    foreach(GameObject activable in activables)
-                    {
-                        activable.GetComponent<Animator>().SetTrigger("Open");
-                    }
-                    state = true;
+                    activable.GetComponent<Animator>().SetTrigger("Open");
                 }
+                state = true;
             }
         }
         if (state && isTimed)
@@ -47,10 +45,18 @@ public class LeverController : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         triggered = false;
+        movablesRoot.GetComponent<Animator>().SetTrigger("Close");
     }
 
     void OnTriggerEnter(Collider other)
     {
         triggered = true;
+        movablesRoot.GetComponent<Animator>().SetTrigger("Open");
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        triggered = true;
+        movablesRoot.GetComponent<Animator>().SetTrigger("Open");
     }
 }
