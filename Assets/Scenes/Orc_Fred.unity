@@ -134,7 +134,11 @@ Prefab:
       propertyPath: activables.Array.data[0]
       value: 
       objectReference: {fileID: 536505069}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000011854614892, guid: cc54e697a1da8314d804dd1a6b0c92df, type: 2}
+    - {fileID: 65000011536146944, guid: cc54e697a1da8314d804dd1a6b0c92df, type: 2}
+    - {fileID: 65000012121778816, guid: cc54e697a1da8314d804dd1a6b0c92df, type: 2}
+    - {fileID: 65000012863089532, guid: cc54e697a1da8314d804dd1a6b0c92df, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cc54e697a1da8314d804dd1a6b0c92df, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &437977601
@@ -518,9 +522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1453150750}
   movementSettings:
-    ForwardSpeed: 6
-    BackwardSpeed: 3
-    StrafeSpeed: 3
+    ForwardSpeed: 4
+    BackwardSpeed: 4
+    StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 339
     JumpForce: 0
@@ -550,17 +554,17 @@ MonoBehaviour:
     XSensitivity: 2
     YSensitivity: 2
     clampVerticalRotation: 1
-    MinimumX: -90
-    MaximumX: 90
+    MinimumX: -89
+    MaximumX: 89
     smooth: 0
     smoothTime: 5
     lockCursor: 1
   advancedSettings:
-    groundCheckDistance: 0.01
+    groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.5
     slowDownRate: 0
     airControl: 0
-    shellOffset: 0
+    shellOffset: 0.1
 --- !u!114 &1462524366
 MonoBehaviour:
   m_ObjectHideFlags: 0

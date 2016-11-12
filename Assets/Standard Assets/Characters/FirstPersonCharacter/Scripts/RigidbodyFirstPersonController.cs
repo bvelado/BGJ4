@@ -26,27 +26,28 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
+                CurrentTargetSpeed = 0f;
 	            if (input == Vector2.zero) return;
 				if (input.x > 0)
 				{
                     //strafe
-                    CurrentTargetSpeed = StrafeSpeed * input.x;
+                    CurrentTargetSpeed += StrafeSpeed * input.x;
 				}
                 if (input.x < 0)
                 {
                     //strafe
-                    CurrentTargetSpeed = StrafeSpeed * -input.x;
+                    CurrentTargetSpeed += StrafeSpeed * -input.x;
                 }
                 if (input.y < 0)
 				{
                     //backwards
-                    CurrentTargetSpeed = BackwardSpeed * -input.y;
+                    CurrentTargetSpeed += BackwardSpeed * -input.y;
 				}
 				if (input.y > 0)
 				{
 					//forwards
 					//handled last as if strafing and moving forward at the same time forwards speed should take precedence
-					CurrentTargetSpeed = ForwardSpeed * input.y;
+					CurrentTargetSpeed += ForwardSpeed * input.y;
 				}
 #if !MOBILE_INPUT
 	            if (Input.GetKey(RunKey))
