@@ -869,6 +869,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fill: {fileID: 2079664265}
+--- !u!1 &355786508 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: c220873e4e61a424aa584f39154974e4, type: 3}
+  m_PrefabInternal: {fileID: 1666076816}
+--- !u!64 &355786509
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 355786508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300004, guid: c220873e4e61a424aa584f39154974e4, type: 3}
 --- !u!1 &521201671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,6 +3143,22 @@ MonoBehaviour:
   firstSelected: {fileID: 1855703798}
   pausePanel: {fileID: 1468577702}
   recText: {fileID: 1452649326}
+--- !u!1 &1406557091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 1f0e5ae0df592174d8dba80d8c241f60, type: 3}
+  m_PrefabInternal: {fileID: 1159079977}
+--- !u!64 &1406557092
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406557091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 1f0e5ae0df592174d8dba80d8c241f60, type: 3}
 --- !u!1 &1410417681
 GameObject:
   m_ObjectHideFlags: 0
