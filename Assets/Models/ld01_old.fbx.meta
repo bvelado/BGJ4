@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: c220873e4e61a424aa584f39154974e4
-timeCreated: 1479042867
+guid: ea5273e6e85bf38478b99a0a5ea0ece4
+timeCreated: 1478964126
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: lave
-    100002: lave 1
-    100004: //RootNode
-    400000: lave
-    400002: lave 1
-    400004: //RootNode
-    2300000: lave
-    2300002: lave 1
-    3300000: lave
-    3300002: lave 1
-    4300000: lave
-    4300002: lave
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
   materials:
     importMaterials: 1
     materialName: 0

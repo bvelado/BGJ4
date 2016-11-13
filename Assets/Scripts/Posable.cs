@@ -10,16 +10,12 @@ public interface IPosable
 {
     void DisplayCanShoot(SpotPhotoTrigger spotPhoto);
     void HideCanShoot();
-    void Shoot(SpotPhotoTrigger spotPhoto);
+    void Pose(SpotPhotoTrigger spotPhoto);
 }
 
 public class Posable : MonoBehaviour, IPosable {
 
     public Text Message;
-
-    void Start()
-    {
-    }
 
     public void DisplayCanShoot(SpotPhotoTrigger spotPhoto)
     {
@@ -31,7 +27,7 @@ public class Posable : MonoBehaviour, IPosable {
         Message.text = "";
     }
 
-    public virtual void Shoot(SpotPhotoTrigger spotPhoto)
+    public virtual void Pose(SpotPhotoTrigger spotPhoto)
     {
         Message.text = spotPhoto.TextShot;
     }

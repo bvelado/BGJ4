@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: texturemain
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: LavaRiver_MAT
+  m_Shader: {fileID: 4800000, guid: a70ad4774dde1d14bbef82377cb71c9b, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -46,9 +46,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _Emissive
+      second:
+        m_Texture: {fileID: 2800000, guid: 0b42641860b294c4fb050505d9ca0d28, type: 3}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Lava
+      second:
+        m_Texture: {fileID: 2800000, guid: 98598f1a537c0ab4483d185b5396f660, type: 3}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Lava_Lines
+      second:
+        m_Texture: {fileID: 2800000, guid: 3aa58c755ad8160459385397238c21a5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 40cc0a34b57fe334192415e7f80b5587, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -58,7 +76,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _Noise
+      second:
+        m_Texture: {fileID: 2800000, guid: 1015de2ab8941c147b63879dee667350, type: 3}
+        m_Scale: {x: 6, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Opacity
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -81,6 +111,9 @@ Material:
       second: 1
     - first:
         name: _DstBlend
+      second: 0
+    - first:
+        name: _Emissive_Power
       second: 0
     - first:
         name: _GlossMapScale
@@ -121,7 +154,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
