@@ -3,6 +3,8 @@ using System.Collections;
 
 public class RespawnManager : MonoBehaviour {
 
+    public RespawnPoints FirstRespawnPoints;
+
     private static RespawnManager instance;
     public static RespawnManager Instance
     {
@@ -15,25 +17,27 @@ public class RespawnManager : MonoBehaviour {
             instance = this;
         else
             Destroy(gameObject);
+
+        currentRespawnPoints = FirstRespawnPoints;
     }
 
     [SerializeField]
-    private SpotPhotoTrigger currentSpotPhoto;
+    private RespawnPoints currentRespawnPoints;
 
     public void Respawn(IRespawnable target)
     {
         if (target.GetGameObject().CompareTag("Goblin"))
         {
-            target.Respawn(currentSpotPhoto.GoblinRespawnPoint.position);
+            target.Respawn(currentRespawnPoints.GoblinRespawnPoint.position);
         }
         else
         {
-            target.Respawn(currentSpotPhoto.OrcRespawnPoint.position);
+            target.Respawn(currentRespawnPoints.OrcRespawnPoint.position);
         }
     }
 
-    public void SetCurrentSpot(SpotPhotoTrigger spot)
+    public void SetCurrentSpot(RespawnPoints points)
     {
-        currentSpotPhoto = spot;
+        currentRespawnPoints = points;
     }
 }
