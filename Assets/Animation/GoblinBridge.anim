@@ -17,14 +17,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: -74, y: 89.99999, z: -90}
+        value: {x: -180, y: 89.99999, z: -90}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: -180, y: 89.99999, z: -90}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -36,7 +41,7 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 633008272
+    - path: 1515327438
       attribute: 4
       script: {fileID: 0}
       classID: 4
@@ -48,7 +53,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0
+    m_StopTime: 0.16666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -68,7 +73,12 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: -74
+        value: -180
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 0.16666667
+        value: -180
         inSlope: 0
         outSlope: 0
         tangentMode: 10
@@ -76,7 +86,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -87,11 +97,16 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
+      - time: 0.16666667
+        value: 89.99999
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -102,11 +117,16 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 10
+      - time: 0.16666667
+        value: -90
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -117,7 +137,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -127,7 +147,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -137,7 +157,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Bridge_orc_rotCtrl
+    path: Bridge_gob_rotCtrl
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

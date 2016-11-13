@@ -27,7 +27,7 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1101 &1101000013948702470
+--- !u!1101 &1101000011725032848
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -38,14 +38,14 @@ AnimatorStateTransition:
     m_ConditionEvent: Open
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102000011481344408}
+  m_DstState: {fileID: 1102000013263818602}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 0
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -60,7 +60,8 @@ AnimatorState:
   m_Name: GoblinBridge
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 1101000011725032848}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -69,12 +70,12 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e9132d99fe69a3443808bdedb82834db, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2bd7dfdafc3455a40a1145142a5d6097, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
---- !u!1102 &1102000011481344408
+--- !u!1102 &1102000013263818602
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
@@ -92,7 +93,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 293b8dfc330775d4195e102d114dbd76, type: 2}
+  m_Motion: {fileID: 7400000, guid: cdd194872ad81b44a8e3e30266098cb8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -107,13 +108,12 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102000010942475562}
-    m_Position: {x: 312, y: -84, z: 0}
+    m_Position: {x: 312, y: 84, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102000011481344408}
-    m_Position: {x: 324, y: 24, z: 0}
+    m_State: {fileID: 1102000013263818602}
+    m_Position: {x: 416, y: 223, z: 0}
   m_ChildStateMachines: []
-  m_AnyStateTransitions:
-  - {fileID: 1101000013948702470}
+  m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
