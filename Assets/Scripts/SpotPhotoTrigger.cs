@@ -21,6 +21,9 @@ public class SpotPhotoTrigger : MonoBehaviour {
 
     private OrcController m_orc;
 
+    public Transform OrcRespawnPoint;
+    public Transform GoblinRespawnPoint;
+
     void Start()
     {
         m_trigger = GetComponent<BoxCollider>();
@@ -51,5 +54,14 @@ public class SpotPhotoTrigger : MonoBehaviour {
             col.GetComponent<IPosable>().HideCanShoot();
             m_orc.canTakeShot = false;
         }   
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(OrcRespawnPoint.position, 2.2f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(GoblinRespawnPoint.position, 1.6f);
     }
 }
