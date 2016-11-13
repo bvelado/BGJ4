@@ -22,7 +22,7 @@ public class FollowIndicator : MonoBehaviour {
         if (Indicator.activeSelf && this.transform.parent != Indicator.transform)
         {
             this.transform.SetParent(Indicator.transform, false);
-            transform.localPosition = new Vector3(20, -5, 0);
+            transform.localPosition = new Vector3(24, -5, 0);
             transform.GetComponent<RectTransform>().rotation.SetEulerAngles(new Vector3(0, 0, -Indicator.GetComponent<RectTransform>().rotation.eulerAngles.z));
             Indicator.GetComponent<Image>().preserveAspect = true;
         }
