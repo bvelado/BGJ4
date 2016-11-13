@@ -11,6 +11,7 @@ public class OrcController : MonoBehaviour {
     public bool waitingForShot = false;
     private string currentScreenName = "first";
     private List<string> takenShots = new List<string>();
+    private bool unactiveUI = false;
 
 	void Start ()
     {
@@ -19,6 +20,11 @@ public class OrcController : MonoBehaviour {
 	
 	void Update ()
     {
+        if (unactiveUI)
+        {
+            canvas.gameObject.SetActive(true);
+            unactiveUI = false;
+        }
         if (waitingForShot)
         {
             RaycastHit hit;
@@ -38,12 +44,10 @@ public class OrcController : MonoBehaviour {
             {
                 if (Input.GetButtonDown("ScreenShot") && !takenShots.Contains(currentScreenName))
                 {
+                    unactiveUI = true;
                     Debug.Log(Application.persistentDataPath + "/" + currentScreenName + ".png");
-                    canvas.enabled = false;
-                    OrcHands.SetActive(false);
                     Application.CaptureScreenshot(Application.persistentDataPath + "/" + currentScreenName + ".png");
-                    canvas.enabled = true;
-                    OrcHands.SetActive(true);
+                    canvas.gameObject.SetActive(false);
                     canTakeShot = false;
                     waitingForShot = false;
                 }
