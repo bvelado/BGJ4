@@ -33,7 +33,6 @@ public class OrcController : MonoBehaviour {
             Debug.DrawRay(Cam.transform.position, Cam.transform.forward * 100, Color.white, 0.1f);
             if (Physics.Raycast(Cam.transform.position, Cam.transform.forward, out hit, 100f, layer.value))
             {
-                Debug.Log(hit.transform);
                 if (hit.transform != null && !canTakeShot)
                 {
                     canTakeShot = true;
