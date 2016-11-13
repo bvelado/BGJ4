@@ -8,12 +8,14 @@ public class OrcController : MonoBehaviour {
     public bool canTakeShot = false;
     public GameObject OrcHands;
     public Canvas canvas;
+    public LayerMask layer;
     public bool waitingForShot = false;
     private string currentScreenName = "first";
     private List<string> takenShots = new List<string>();
     private bool unactiveUI = false;
 
-	void Start ()
+
+    void Start ()
     {
 	
 	}
@@ -29,8 +31,9 @@ public class OrcController : MonoBehaviour {
         {
             RaycastHit hit;
             Debug.DrawRay(Cam.transform.position, Cam.transform.forward * 100, Color.white, 0.1f);
-            if (Physics.Raycast(Cam.transform.position, Cam.transform.forward, out hit, 1 << LayerMask.NameToLayer("screenShotLayer")))
+            if (Physics.Raycast(Cam.transform.position, Cam.transform.forward, out hit, 100f, layer.value))
             {
+                Debug.Log(hit.transform);
                 if (hit.transform != null && !canTakeShot)
                 {
                     canTakeShot = true;
