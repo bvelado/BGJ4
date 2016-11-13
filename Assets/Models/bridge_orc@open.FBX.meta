@@ -1,34 +1,26 @@
 fileFormatVersion: 2
-guid: 3923e714c49311d4083b154e6a72a29f
-timeCreated: 1479044303
+guid: aae0a53bb1bd4004c8233d35e3ba3605
+timeCreated: 1479058310
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Bridge_orc_fixe
-    100004: Bridge_orc_mobile
+    100000: Bridge_gob_fixe001
+    100002: Bridge_gob_mobile001
+    100004: //RootNode
     100006: Bridge_orc_rotCtrl
-    100008: Bridge_gob_fixe001
-    100010: Bridge_gob_mobile001
-    400000: //RootNode
-    400002: Bridge_orc_fixe
-    400004: Bridge_orc_mobile
+    400000: Bridge_gob_fixe001
+    400002: Bridge_gob_mobile001
+    400004: //RootNode
     400006: Bridge_orc_rotCtrl
-    400008: Bridge_gob_fixe001
-    400010: Bridge_gob_mobile001
-    2300000: Bridge_orc_fixe
-    2300002: Bridge_orc_mobile
-    2300004: Bridge_gob_fixe001
-    2300006: Bridge_gob_mobile001
-    3300000: Bridge_orc_fixe
-    3300002: Bridge_orc_mobile
-    3300004: Bridge_gob_fixe001
-    3300006: Bridge_gob_mobile001
-    4300000: Bridge_orc_fixe
-    4300002: Bridge_orc_mobile
-    4300004: Bridge_gob_mobile001
-    4300006: Bridge_gob_fixe001
+    2300000: Bridge_gob_fixe001
+    2300002: Bridge_gob_mobile001
+    3300000: Bridge_gob_fixe001
+    3300002: Bridge_gob_mobile001
+    4300000: Bridge_gob_mobile001
+    4300002: Bridge_gob_fixe001
+    7400000: Take 001
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -87,7 +79,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
