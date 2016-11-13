@@ -8,15 +8,27 @@ ModelImporter:
     100000: lave
     100002: lave 1
     100004: //RootNode
+    100006: Lvl1_Lava
+    100008: Lvl1_Walls
     400000: lave
     400002: lave 1
     400004: //RootNode
+    400006: Lvl1_Lava
+    400008: Lvl1_Walls
     2300000: lave
     2300002: lave 1
+    2300004: //RootNode
+    2300006: Lvl1_Lava
+    2300008: Lvl1_Walls
     3300000: lave
     3300002: lave 1
+    3300004: //RootNode
+    3300006: Lvl1_Lava
+    3300008: Lvl1_Walls
     4300000: lave
     4300002: lave
+    4300004: Lvl1_Walls
+    4300006: Lvl1_Lava
   materials:
     importMaterials: 1
     materialName: 0

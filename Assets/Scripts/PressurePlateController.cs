@@ -44,19 +44,28 @@ public class PressurePlateController : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        triggered = false;
-        movablesRoot.GetComponent<Animator>().SetTrigger("Close");
+        if (!other.CompareTag("Goblin"))
+        {
+            triggered = false;
+            movablesRoot.GetComponent<Animator>().SetTrigger("Close");
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        triggered = true;
-        movablesRoot.GetComponent<Animator>().SetTrigger("Open");
+        if (!other.CompareTag("Goblin"))
+        {
+            triggered = true;
+            movablesRoot.GetComponent<Animator>().SetTrigger("Open");
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        triggered = true;
-        movablesRoot.GetComponent<Animator>().SetTrigger("Open");
+        if (!other.CompareTag("Goblin"))
+        {
+            triggered = true;
+            movablesRoot.GetComponent<Animator>().SetTrigger("Open");
+        }
     }
 }
