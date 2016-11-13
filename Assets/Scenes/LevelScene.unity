@@ -1402,6 +1402,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f6d962d237b4e4c8863f8ce2ae4e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_message: {fileID: 247276240}
+  activables:
+  - {fileID: 1723650245}
+--- !u!65 &1111212911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111212908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.25, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!65 &1111212912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111212908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4204845, y: 1, z: 1.7040477}
+  m_Center: {x: 0.48973197, y: 0, z: 0.14795034}
 --- !u!1001 &1232755716
 Prefab:
   m_ObjectHideFlags: 0
@@ -1465,6 +1492,10 @@ Prefab:
     - target: {fileID: 4000011290617508, guid: d31771ee097ea6046a81920807f4e0ae, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 89.994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010857894402, guid: d31771ee097ea6046a81920807f4e0ae, type: 2}
+      propertyPath: m_TagString
+      value: Goblin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d31771ee097ea6046a81920807f4e0ae, type: 2}
@@ -2442,7 +2473,7 @@ Animator:
   m_GameObject: {fileID: 1723650245}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3b998b56fa7217f44be2703be4505c07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
