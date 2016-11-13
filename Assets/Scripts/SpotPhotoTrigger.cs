@@ -12,39 +12,44 @@ public class SpotPhotoTrigger : MonoBehaviour {
     private string textShot;
     public string TextShot { get { return textShot; } }
 
+    [SerializeField]
+    private string title;
+    public string Title { get { return title; } }
+
     private BoxCollider m_trigger;
     private bool hasBeenActivated = false;
+
+    private OrcController m_orc;
 
     void Start()
     {
         m_trigger = GetComponent<BoxCollider>();
+        m_orc = FindObjectOfType<OrcController>();
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if(!hasBeenActivated)
+        if(col.CompareTag("Goblin")&& col.GetComponent<IPosable>() != null)
         {
-            if (col.GetComponent<IPosable>() != null)
-                col.GetComponent<IPosable>().DisplayCanShoot(this);
+            col.GetComponent<IPosable>().DisplayCanShoot(this);
         }
     }
 
     void OnTriggerStay(Collider col)
     {
-        if (!hasBeenActivated && Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("P2_Action") && col.GetComponent<IPosable>() != null)
         {
             hasBeenActivated = true;
-
-            if (col.GetComponent<IPosable>() != null)
-                col.GetComponent<IPosable>().Shoot(this);
+            m_orc.canTakeShot = true;
+            col.GetComponent<IPosable>().Pose(this);
         }
-        
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.GetComponent<IPosable>() != null) {
+        if (col.CompareTag("Goblin") && col.GetComponent<IPosable>() != null) {
             col.GetComponent<IPosable>().HideCanShoot();
+            m_orc.canTakeShot = false;
         }   
     }
 }
