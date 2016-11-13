@@ -60,4 +60,9 @@ public class PauseMenu : MonoBehaviour {
             }
         }
     }
+
+    public void Continue (){
+         recText.text = "REC";
+         Expanded = false;
+    }
 }

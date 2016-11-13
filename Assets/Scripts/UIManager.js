@@ -18,29 +18,29 @@ function Start () {
 }
 
 function Update () {
-	if (Input.GetButtonDown("Start1") || Input.GetKeyDown("escape")){
-		TriggerPauseMenu();
-	}
+	// if (Input.GetButtonDown("Start1") || Input.GetKeyDown("escape")){
+	// 	TriggerPauseMenu();
+	// }
 
-	if (canMoveCursor && pauseMenu.activeSelf){
-		if (Input.GetAxis("Vertical") > 0){
-			MoveCursorUp();
-		}
-		if (Input.GetAxis("Vertical") < 0){
-			MoveCursorDown();
-		}
-		if (Input.GetButtonDown("Fire1")){
-			switch (cursorIdx){
-				case 0:
-					TriggerPauseMenu();
-					break;
-				case pauseCursorsParent.childCount - 1:
-					TriggerPauseMenu();
-					SceneManager.LoadScene("MenuAccueil");
-					break;
-			}
-		}
-	}
+	// if (canMoveCursor && pauseMenu.activeSelf){
+	// 	if (Input.GetAxis("Vertical") > 0){
+	// 		MoveCursorUp();
+	// 	}
+	// 	if (Input.GetAxis("Vertical") < 0){
+	// 		MoveCursorDown();
+	// 	}
+		// if (Input.GetButtonDown("Fire1")){
+		// 	switch (cursorIdx){
+		// 		case 0:
+		// 			TriggerPauseMenu();
+		// 			break;
+		// 		case pauseCursorsParent.childCount - 1:
+		// 			TriggerPauseMenu();
+		// 			SceneManager.LoadScene("MenuAccueil");
+		// 			break;
+		// 	}
+		// }
+	// }
 }
 
 function TriggerPauseMenu (){
@@ -54,6 +54,11 @@ function TriggerPauseMenu (){
 		canMoveCursor = true;
 		// pauseCursorsParent.GetChild(cursorIdx).gameObject.GetComponent.<Animator>().SetTrigger("Highlighted");
 	}
+}
+
+function BackToMainMenu (){
+	TriggerPauseMenu();
+	SceneManager.LoadScene("MenuAccueil");
 }
 
 function MoveCursorUp (){
