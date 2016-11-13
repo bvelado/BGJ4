@@ -6,6 +6,8 @@ public class OrcController : MonoBehaviour {
 
     public Camera Cam;
     public bool canTakeShot = false;
+    public GameObject OrcHands;
+    public Canvas canvas;
     public bool waitingForShot = false;
     private string currentScreenName = "first";
     private List<string> takenShots = new List<string>();
@@ -37,7 +39,11 @@ public class OrcController : MonoBehaviour {
                 if (Input.GetButtonDown("ScreenShot") && !takenShots.Contains(currentScreenName))
                 {
                     Debug.Log(Application.persistentDataPath + "/" + currentScreenName + ".png");
+                    canvas.enabled = false;
+                    OrcHands.SetActive(false);
                     Application.CaptureScreenshot(Application.persistentDataPath + "/" + currentScreenName + ".png");
+                    canvas.enabled = true;
+                    OrcHands.SetActive(true);
                     canTakeShot = false;
                     waitingForShot = false;
                 }

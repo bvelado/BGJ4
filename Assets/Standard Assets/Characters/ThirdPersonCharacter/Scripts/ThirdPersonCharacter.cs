@@ -65,7 +65,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			else
 			{
-				HandleAirborneMovement();
+                HandleAirborneMovement();
 			}
 
 			ScaleCapsuleForCrouching(crouch);
