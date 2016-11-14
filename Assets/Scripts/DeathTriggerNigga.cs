@@ -21,6 +21,6 @@ public class DeathTriggerNigga : MonoBehaviour {
     void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider>().size);
+        Gizmos.DrawIcon(transform.position, "skull", true);
     }
 }

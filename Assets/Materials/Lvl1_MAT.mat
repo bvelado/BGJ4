@@ -42,19 +42,19 @@ Material:
     - first:
         name: _Diffuse
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 474a1cf3fbad4ce40be360051e53ebcd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _Diffuse_2
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dc257641861890b43840a98efd54ef9c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _Diffuse_3
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8569c8df687f0fb478f33ef1f3be176c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
