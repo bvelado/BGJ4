@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LavaCas_MAT
-  m_Shader: {fileID: 4800000, guid: ae73a46c75a3bac48b7e145c808b9b45, type: 3}
+  m_Shader: {fileID: 4800000, guid: a70ad4774dde1d14bbef82377cb71c9b, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -54,7 +54,7 @@ Material:
     - first:
         name: _Lava
       second:
-        m_Texture: {fileID: 2800000, guid: 333ad30bc57e531488de161875793be2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 98598f1a537c0ab4483d185b5396f660, type: 3}
         m_Scale: {x: 2, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -78,7 +78,7 @@ Material:
     - first:
         name: _Noise
       second:
-        m_Texture: {fileID: 2800000, guid: 5027fd5a15b1cde4282a8921045525af, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1015de2ab8941c147b63879dee667350, type: 3}
         m_Scale: {x: 6, y: 3}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -90,11 +90,17 @@ Material:
     - first:
         name: _Opacity
       second:
-        m_Texture: {fileID: 2800000, guid: d6cf5ec9c6fec1449ab51b9a46e42a54, type: 3}
+        m_Texture: {fileID: 2800000, guid: c357853818b13e04db913adf42247326, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SpecGlossMap
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -158,3 +164,6 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 0.2, g: 0.2, b: 0.2, a: 1}
