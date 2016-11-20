@@ -217,14 +217,25 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: '
-
-      Imported file ''gobelin@dab'' conversion failed: Transform ''Base HumanPelvis''
-      for human bone ''Hips'' not found
-
-
-'
-    animationImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'Base HumanLCalf' : position error
+      = 1.267525 mm\n\t'Base HumanRCalf' : position error = 2.093307 mm\n\nInbetween
+      bone default rotation found in this file is different from the one found in
+      the source avatar:\n\t'Base HumanSpine1' : rotation error = 1.545276 deg\n\t'Base
+      HumanSpine4' : rotation error = 11.600885 deg\n\t'Base HumanRibcage' : rotation
+      error = 2.417354 deg\n\nClip 'Take 001' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Base HumanLCalf' has translation animation that will
+      be discarded.\n\t'Base HumanLDigit11' has translation animation that will be
+      discarded.\n\t'Base HumanRCalf' has translation animation that will be discarded.\n\t'Base
+      HumanRFoot' has scale animation that will be discarded.\n\t'Base HumanSpine1'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Base
+      HumanSpine4' is inbetween humanoid transforms and has rotation animation that
+      will be discarded.\n\t'Base HumanRibcage' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Base HumanRArmForearm' has
+      scale animation that will be discarded.\n\t'Base HumanRArmDigit11' has scale
+      animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 0
@@ -238,15 +249,15 @@ ModelImporter:
       name: dab
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0

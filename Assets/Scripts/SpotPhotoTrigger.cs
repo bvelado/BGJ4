@@ -45,7 +45,15 @@ public class SpotPhotoTrigger : MonoBehaviour {
         {
             hasBeenActivated = true;
             Orc.canTakeShot = true;
-            col.GetComponent<IPosable>().Pose(this);
+            if (!col.GetComponent<IPosable>().IsPosing())
+            {
+                col.GetComponent<IPosable>().Pose(this);
+            }
+            else
+            {
+                col.GetComponent<IPosable>().DisplayCanShoot(this);
+                col.GetComponent<IPosable>().Unpose();
+            }
         }
     }
 
