@@ -42,6 +42,7 @@ public class Posable : MonoBehaviour, IPosable {
     {
         isPosing = true;
         Message.text = spotPhoto.TextShot;
+        m_animator.ResetTrigger("CancelPose");
         m_animator.SetTrigger(spotPhoto.Title);
     }
 
