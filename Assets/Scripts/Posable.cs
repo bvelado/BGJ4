@@ -17,8 +17,14 @@ public interface IPosable
 
 public class Posable : MonoBehaviour, IPosable {
 
+    public OrcController Orc;
     Animator m_animator;
     public Text Message;
+
+    void Reset()
+    {
+        Orc = FindObjectOfType<OrcController>();
+    }
 
     private bool isPosing = false;
 
@@ -41,9 +47,11 @@ public class Posable : MonoBehaviour, IPosable {
     public virtual void Pose(SpotPhotoTrigger spotPhoto)
     {
         isPosing = true;
+        
         Message.text = spotPhoto.TextShot;
         m_animator.ResetTrigger("CancelPose");
         m_animator.SetTrigger(spotPhoto.Title);
+        Orc.WaitForShot(spotPhoto.Title);
     }
 
     public bool IsPosing()
@@ -55,5 +63,6 @@ public class Posable : MonoBehaviour, IPosable {
     {
         isPosing = false;
         m_animator.SetTrigger("CancelPose");
+        Orc.NotWaitForShot();
     }
 }

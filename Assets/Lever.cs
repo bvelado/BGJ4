@@ -46,7 +46,7 @@ public class Lever : MonoBehaviour, IUsable
         if (col.CompareTag("Goblin"))
         {
             inRange = true;
-            m_message.text = "Utiliser le levier";
+            m_message.text = "Kein - Press B to use";
         }
     }
 

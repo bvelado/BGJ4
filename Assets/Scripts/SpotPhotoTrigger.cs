@@ -18,25 +18,20 @@ public class SpotPhotoTrigger : MonoBehaviour {
 
     private BoxCollider m_trigger;
     private bool hasBeenActivated = false;
-    
-    public OrcController Orc;
 
     void Awake()
     {
         m_trigger = GetComponent<BoxCollider>();
     }
 
-    void Reset()
-    {
-        Orc = FindObjectOfType<OrcController>();
-    }
+
 
     void OnTriggerEnter(Collider col)
     {
         if(col.CompareTag("Goblin")&& col.GetComponent<IPosable>() != null)
         {
             col.GetComponent<IPosable>().DisplayCanShoot(this);
-            Orc.WaitForShot(Title);
+            
         }
     }
 
@@ -45,7 +40,7 @@ public class SpotPhotoTrigger : MonoBehaviour {
         if (Input.GetButtonDown("P2_Use") && col.GetComponent<IPosable>() != null)
         {
             hasBeenActivated = true;
-            Orc.canTakeShot = true;
+            
             if (!col.GetComponent<IPosable>().IsPosing())
             {
                 col.GetComponent<IPosable>().Pose(this);
@@ -62,9 +57,8 @@ public class SpotPhotoTrigger : MonoBehaviour {
     {
         if (col.CompareTag("Goblin") && col.GetComponent<IPosable>() != null) {
             col.GetComponent<IPosable>().HideCanShoot();
-            Orc.canTakeShot = false;
         }
-        Orc.NotWaitForShot();
+        
     }
 
     

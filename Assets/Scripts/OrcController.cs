@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.UI;
 
 public class OrcController : MonoBehaviour {
 
@@ -13,12 +14,7 @@ public class OrcController : MonoBehaviour {
     private string currentScreenName = "first";
     private List<string> takenShots = new List<string>();
     private bool unactiveUI = false;
-
-
-    void Start ()
-    {
-	
-	}
+    public Text MessageOrc;
 	
 	void Update ()
     {
@@ -44,6 +40,7 @@ public class OrcController : MonoBehaviour {
             }
             if (canTakeShot)
             {
+                MessageOrc.text = "Ein - Press A to shot a picture.";
                 if (Input.GetButtonDown("ScreenShot") && !takenShots.Contains(currentScreenName))
                 {
                     unactiveUI = true;
@@ -53,6 +50,9 @@ public class OrcController : MonoBehaviour {
                     canTakeShot = false;
                     waitingForShot = false;
                 }
+            } else
+            {
+                MessageOrc.text = "";
             }
         }
 	}

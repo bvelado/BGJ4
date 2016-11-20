@@ -224,6 +224,7 @@ RectTransform:
   - {fileID: 1346058627}
   - {fileID: 1410417682}
   - {fileID: 247276239}
+  - {fileID: 1968941228}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -3430,6 +3431,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.81414
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013727842574, guid: bb6fb4d110c278f4e87b45b4f58af320,
+        type: 2}
+      propertyPath: Orc
+      value: 
+      objectReference: {fileID: 2109119081}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb6fb4d110c278f4e87b45b4f58af320, type: 2}
   m_IsPrefabParent: 0
@@ -5882,10 +5888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc2e5a1d9ddda94c82deda42f657f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCanShoot: Press B to dab
-  textShot: "Y\xE9"
+  textCanShoot: Kein - Press B to dab
+  textShot: Kein - Press B to stop
   title: Dab
-  Orc: {fileID: 2109119081}
 --- !u!65 &1418797112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6347,22 +6352,6 @@ Transform:
   - {fileID: 888026780}
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!1 &1523212949 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010655176000, guid: bb6fb4d110c278f4e87b45b4f58af320,
-    type: 2}
-  m_PrefabInternal: {fileID: 682280804}
---- !u!114 &1523212957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1523212949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c52f2bd858ece048ba7e2ce07593328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1535833368
 Prefab:
   m_ObjectHideFlags: 0
@@ -6545,7 +6534,6 @@ MonoBehaviour:
   textCanShoot: 
   textShot: 
   title: 
-  Orc: {fileID: 2109119081}
 --- !u!65 &1560309721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8430,6 +8418,95 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957168067}
+--- !u!1 &1968941224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1968941228}
+  - 222: {fileID: 1968941227}
+  - 114: {fileID: 1968941225}
+  - 114: {fileID: 1968941226}
+  m_Layer: 5
+  m_Name: MessageOrc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1968941225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968941224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 67be1b4489d43ed459e6602d524982c5, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 48
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!114 &1968941226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968941224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!222 &1968941227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968941224}
+--- !u!224 &1968941228
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1968941224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 32841121}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 150}
+  m_SizeDelta: {x: 800, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1979181389
 Prefab:
   m_ObjectHideFlags: 0
@@ -9174,6 +9251,16 @@ Prefab:
       propertyPath: m_TagString
       value: Orc
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010055962548, guid: 39aafceb47743ad49894142b5b0db957,
+        type: 2}
+      propertyPath: GoblinLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010055962548, guid: 39aafceb47743ad49894142b5b0db957,
+        type: 2}
+      propertyPath: MessageOrc
+      value: 
+      objectReference: {fileID: 1968941225}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39aafceb47743ad49894142b5b0db957, type: 2}
   m_IsPrefabParent: 0
