@@ -31,16 +31,17 @@ public class OrcController : MonoBehaviour {
             {
                 if (hit.transform != null && !canTakeShot)
                 {
+                    MessageOrc.text = "Ein - Press A to shot a picture.";
                     canTakeShot = true;
                 }
             }
             else
             {
+                MessageOrc.text = "";
                 canTakeShot = false;
             }
             if (canTakeShot)
             {
-                MessageOrc.text = "Ein - Press A to shot a picture.";
                 if (Input.GetButtonDown("ScreenShot") && !takenShots.Contains(currentScreenName))
                 {
                     unactiveUI = true;
@@ -50,9 +51,6 @@ public class OrcController : MonoBehaviour {
                     canTakeShot = false;
                     waitingForShot = false;
                 }
-            } else
-            {
-                MessageOrc.text = "";
             }
         }
 	}
