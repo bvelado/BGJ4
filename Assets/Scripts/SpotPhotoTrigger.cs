@@ -36,6 +36,7 @@ public class SpotPhotoTrigger : MonoBehaviour {
         if(col.CompareTag("Goblin")&& col.GetComponent<IPosable>() != null)
         {
             col.GetComponent<IPosable>().DisplayCanShoot(this);
+            Orc.WaitForShot(Title);
         }
     }
 
@@ -62,7 +63,8 @@ public class SpotPhotoTrigger : MonoBehaviour {
         if (col.CompareTag("Goblin") && col.GetComponent<IPosable>() != null) {
             col.GetComponent<IPosable>().HideCanShoot();
             Orc.canTakeShot = false;
-        }   
+        }
+        Orc.NotWaitForShot();
     }
 
     
