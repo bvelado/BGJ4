@@ -41,7 +41,7 @@ public class SpotPhotoTrigger : MonoBehaviour {
 
     void OnTriggerStay(Collider col)
     {
-        if (Input.GetButtonDown("P2_Action") && col.GetComponent<IPosable>() != null)
+        if (Input.GetButtonDown("P2_Use") && col.GetComponent<IPosable>() != null)
         {
             hasBeenActivated = true;
             Orc.canTakeShot = true;
