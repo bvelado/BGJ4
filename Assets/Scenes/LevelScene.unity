@@ -7021,6 +7021,18 @@ Animator:
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 0d5664ac5ae6c0142afa42ee31a468c1, type: 3}
   m_PrefabInternal: {fileID: 1938435943}
+--- !u!65 &1938435947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938435944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7007382, y: 4.329966, z: 0.55961025}
+  m_Center: {x: 0, y: 0, z: 0.27980512}
 --- !u!1 &1948542223
 GameObject:
   m_ObjectHideFlags: 0
